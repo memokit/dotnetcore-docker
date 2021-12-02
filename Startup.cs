@@ -47,8 +47,8 @@ namespace ExternalEPODAPI
             }
             else
             {
-                context.LoadUnmanagedLibrary(Path.GetFullPath("/Libs/AppUtils.dll"));
-                context.LoadUnmanagedLibrary(Path.GetFullPath("/Libs/Interop.ActiveDs.dll"));
+                // context.LoadUnmanagedLibrary(Path.GetFullPath("./AppUtils.dll"));
+                // context.LoadUnmanagedLibrary(Path.GetFullPath("./Interop.ActiveDs.dll"));
             }
 
             // app.UseHttpsRedirection();
