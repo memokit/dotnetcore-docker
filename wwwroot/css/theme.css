@@ -1,0 +1,101 @@
+.kssp-header {
+    width: 100%;
+}
+
+.kssp-top-nav-header {
+    height: 6rem;
+    background-color: #272828;
+    color: #fff;
+}
+
+.kssp-top-nav-menu {
+    background-color: #343535;
+}
+
+.kssp-footer {
+    background-color: #343535;
+}
+
+.kssp-logo>img {
+    height: 80px;
+}
+
+.kssp-left-sidebar {
+    background-color: #222d32;
+    width: 300px;
+}
+
+.kssp-header-title {
+    border-bottom: 1px solid #f37021;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.kssp-title {
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+    color: #f37021;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.kssp-title-action {
+    margin-top: 2px;
+}
+
+.kssp-content-body {
+    padding: 20px 0;
+}
+
+.kssp-content-body-detail {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 5px 15px 5px 15px;
+    border: 1px solid #f37021;
+}
+
+.kssp-form-data-group {
+    margin-top: 25px;
+}
+
+h1.kssp-line-bottom,
+h2.kssp-line-bottom,
+h3.kssp-line-bottom,
+h4.kssp-line-bottom,
+h5.kssp-line-bottom,
+h6.kssp-line-bottom {
+    border-bottom: 1px solid #f37021;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+p.border-default-text {
+    margin-bottom: 0;
+    height: 40px;
+    border: 0.05rem solid #c6c5c5;
+    border-radius: 0.25rem;
+    padding-top: 6px;
+    padding-left: 15px;
+}
+
+p.border-default-text-disable {
+    margin-bottom: 0;
+    height: 40px;
+    border: 0.05rem solid #c6c5c5;
+    border-radius: 0.25rem;
+    padding-top: 6px;
+    padding-left: 15px;
+    background-color: #e8e8e8;
+}
+
+p.border-orange-text {
+    margin-bottom: 0;
+    height: 40px;
+    border: 0.05rem solid #f37021;
+    border-radius: 0.25rem;
+    padding-top: 6px;
+    padding-left: 15px;
+}

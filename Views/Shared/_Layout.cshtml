@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="~/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - External EPOD</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/fortawesome/fontawesome-free/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/css/fortawesome/fontawesome-free/css/regular.css" />
+    <link rel="stylesheet" href="~/css/fortawesome/fontawesome-free/css/brands.css" />
+    <link rel="stylesheet" href="~/css/fortawesome/fontawesome-free/css/solid.css" />
+    <link rel="stylesheet" href="~/css/ace-font.css" />
+    <link rel="stylesheet" href="~/css/ace.css" />
+    <link rel="stylesheet" href="~/css/ace-themes.css" />
+    <link rel="stylesheet" href="~/css/theme.css" />
+    <link rel="stylesheet" href="~/css/custom.css" />
+
+    @RenderSection("Styles", required: false )
+</head>
+
+<body>
+    <div class="body-container">
+        <div class="pos-abs" id="scroll-down"></div>
+
+        @Html.Partial("_Header")
+
+        <div class="main-container bgc-white">
+            <div role="main" class="main-content">
+                <div class="page-content p-0">
+                    @RenderBody()
+                    @Html.Partial("_Footer")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/popper.js/dist/umd/popper.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/holderjs/holder.js"></script>
+    <script src="~/js/ace.js"></script>
+    <script src="~/js/lodash.min.js"></script>
+    <script src="~/js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
