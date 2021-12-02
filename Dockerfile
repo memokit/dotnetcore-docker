@@ -1,4 +1,8 @@
 # Install dependencies only when needed
+FROM mcr.microsoft.com/dotnet/runtime:6.0 AS base
+WORKDIR /app
+EXPOSE 5000
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
 WORKDIR /app
@@ -16,9 +20,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /publish .
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
-
-
-FROM mcr.microsoft.com/dotnet/runtime:6.0 AS base
-WORKDIR /app
-EXPOSE 5000
 
