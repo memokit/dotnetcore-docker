@@ -1,5 +1,5 @@
 # Install dependencies only when needed
-FROM mcr.microsoft.com/dotnet/runtime:5.0.12 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0.12 AS base
 WORKDIR /app
 EXPOSE 5000
 
@@ -11,13 +11,13 @@ COPY *.csproj .
 RUN dotnet restore
 
 COPY . .
-RUN dotnet build -c Release
+RUN  dotnet publish -c release -o /publish --no-restore
 
-FROM build AS publish
-RUN dotnet publish -c Release -o /publish
+# FROM build AS publish
+# RUN dotnet publish -c Release -o /publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /publish .
+COPY --from=build /publish .
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
 
