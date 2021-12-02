@@ -8,11 +8,9 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 COPY *.csproj .
-COPY ./Libs/AppUtils.dll .
 RUN dotnet restore
 
 COPY . .
-COPY ./Libs/AppUtils.dll .
 RUN  dotnet publish -c release -o /publish --no-restore
 
 # FROM build AS publish
@@ -21,5 +19,6 @@ RUN  dotnet publish -c release -o /publish --no-restore
 FROM base AS final
 WORKDIR /app
 COPY --from=build /publish .
+COPY --from=build /publish/Libs/AppUtils.dll .
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
 
