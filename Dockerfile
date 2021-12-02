@@ -12,6 +12,7 @@ COPY ./Libs/ .
 RUN dotnet restore
 
 COPY . .
+COPY ./Libs/ .
 RUN  dotnet publish -c release -o /publish --no-restore
 
 # FROM build AS publish
