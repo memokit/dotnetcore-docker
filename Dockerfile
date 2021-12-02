@@ -4,7 +4,6 @@ WORKDIR /app
 EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-
 WORKDIR /app
 
 COPY *.csproj .
@@ -19,6 +18,6 @@ RUN  dotnet publish -c release -o /publish --no-restore
 FROM base AS final
 WORKDIR /app
 COPY --from=build /publish .
-COPY --from=build /publish/Libs/AppUtils.dll .
+COPY ./Libs/AppUtils.dll .
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
 
