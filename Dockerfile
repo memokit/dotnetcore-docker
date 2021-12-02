@@ -12,12 +12,14 @@ RUN dotnet restore
 COPY . .
 RUN  dotnet publish -c release -o /publish --no-restore
 
+COPY ./Libs/AppUtils.dll /publish
+
 # FROM build AS publish
 # RUN dotnet publish -c Release -o /publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=build /publish .
-COPY ./Libs/AppUtils.dll .
+
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
 
