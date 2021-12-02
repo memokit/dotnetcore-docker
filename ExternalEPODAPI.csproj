@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="DateUtil" Version="1.1.1">
+      <HintPath>./Libs/AppUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveDS">
+      <HintPath>./Libs/Interop.ActiveDs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
