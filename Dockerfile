@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 COPY *.csproj .
-COPY /Libs/* .
+COPY ./Libs/ .
 RUN dotnet restore
 
 COPY . .
