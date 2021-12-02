@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="DateUtil" Version="1.1.1">
+    <Reference Include="AppUtils" Version="1.1.1">
       <HintPath>./Libs/AppUtils.dll</HintPath>
     </Reference>
     <Reference Include="ActiveDS">
