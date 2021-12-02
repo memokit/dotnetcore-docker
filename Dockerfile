@@ -1,5 +1,5 @@
 # Install dependencies only when needed
-FROM mcr.microsoft.com/dotnet/core/sdk:5.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 
 WORKDIR /app
 
@@ -18,7 +18,7 @@ COPY --from=publish /publish .
 ENTRYPOINT ["dotnet", "ExternalEPODAPI.dll"]
 
 
-FROM mcr.microsoft.com/dotnet/core/aspnet AS base
+FROM mcr.microsoft.com/dotnet/runtime:6.0 AS base
 WORKDIR /app
 EXPOSE 5000
 
